@@ -138,8 +138,15 @@ main() {
     auto result = bfs(id[sx][sy]);
     cout << result << endl;
     if (result >= 0) {
+	    cout << "Full path:   ";
 	    for(auto const& value: winningPath)
 		    cout << "(" << value.position << "," << value.action  << ")   ";
+	    cout << endl;
+
+	    cout << "Action path: ";
+	    for(auto const& value: winningPath)
+		    if (value.action != 'm')
+		    	cout << "(" << value.position << "," << value.action  << ")   ";
 	    cout << endl;
 	}
 
